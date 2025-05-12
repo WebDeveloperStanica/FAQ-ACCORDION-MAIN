@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+
+.container img {
+    width: 700px;
+}
+
+.container {
+    width: 700px;
+    background-color: hsl(275, 100%, 97%);
+    position: relative;
+    margin: 20px auto;
+}
+
+.main {
+    width: 500px;
+    max-width: 800px;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 140px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.starTitle {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+#FAQsStar {
+    width: 30px;
+}
+
+h1 {
+    color: hsl(292, 42%, 14%);   
+}
+
+.section h2 {
+color: hsl(292, 42%, 14%);    
+font-weight: 600;
+font-size: large;
+
+}
+
+.section p {
+    font-weight: 400;
+    font-size: 16px;
+    
+    }
+
+.icon-plus {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.icon-plus img{
+    width: 30px;
+    height: 30px;
+}
+
+p {
+    /* visibility: hidden; */
+    margin-bottom: 40px;
+    color: hsl(292, 16%, 49%)
+}
+
+.hideCss {
+    display: none;
+    /* visibility: hidden; */
+}
+
+.reveal{
+    display: block;
+    /* visibility: visible; */
+}
+
+.attribution {
+    position: relative;
+    background-color: red;
+    margin-top: 800px;
+}
