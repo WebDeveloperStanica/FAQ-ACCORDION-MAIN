@@ -6,8 +6,6 @@
 
 body {
     font-family: "Red Hat Text", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
     font-style: normal;
   }
 
@@ -16,22 +14,32 @@ body {
 }
 
 .container {
-    width: 700px;
-    background-color: hsl(275, 100%, 97%);
+    width: 90%;
+    max-width: 700px;
+    height: 90vh;
+    background-color:hsl(275, 100%, 97%);
     position: relative;
     margin: 20px auto;
+    box-shadow: 2px 2px 16px 1px hsl(0, 0%, 72%);
 }
 
+.container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
 .main {
-    width: 500px;
+    width: 70%;
     max-width: 800px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     position: absolute;
-    top: 60px;
-    left: 140px;
-    margin: 20px auto;
-    padding: 20px;
+    top: 15%;
+    left: 15%;
+    margin: 0 auto;
+    padding: 30px;
     border-radius: 8px;
+    box-shadow: 0.1px 0.1px 12px 0.1px hsl(276, 30%, 66%);
 }
 
 .starTitle {
@@ -48,48 +56,130 @@ h1 {
     color: hsl(292, 42%, 14%);   
 }
 
+
+.section {
+    margin-top: 20px;
+}
+
 .section h2 {
 color: hsl(292, 42%, 14%);    
 font-weight: 600;
-font-size: large;
-
+font-size: medium;
+/* margin-bottom: 10px; */
 }
 
-.section p {
-    font-weight: 400;
-    font-size: 16px;
+.section h2:hover {
+    color: hsl(289, 70%, 45%);
+    cursor: pointer;
     
+}
+
+    hr {
+        border: 1px solid hsl(0, 0%, 94%);
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 
+button.plus-btn:hover,
+button.plus-btn:focus {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+ 
 .icon-plus {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    /* margin-bottom: 1px; */
 }
 
 .icon-plus img{
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
+}
+
+.plus-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 p {
     /* visibility: hidden; */
-    margin-bottom: 40px;
-    color: hsl(292, 16%, 49%)
+        /* font-weight: 400; */
+    font-size: 15px;
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+    color: hsl(292, 16%, 49%);
+     transition: background-color 0.2s ease-out;
+    
 }
 
 .hideCss {
-    display: none;
-    /* visibility: hidden; */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.9s ease, opacity 0.9s ease;
 }
 
 .reveal{
-    display: block;
+    max-height: 500px;
+    opacity: 1;
     /* visibility: visible; */
 }
 
 .attribution {
     position: relative;
-    background-color: red;
+    background-color:hsl(275, 100%, 97%);
     margin-top: 800px;
+    text-align: center;
+    padding: 10px;
 }
+
+@media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .section h2 {
+      font-size: 1rem;
+    }
+  
+    .main {
+      top: 15%;
+      left: 15%;
+      padding: 16px;
+    }
+  
+    .starTitle {
+      gap: 15px;
+    }
+  
+    .plus-btn img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+/* 
+    .container {
+       height: 90vh;
+    } */
+
+    .main {
+      top: 10%;
+      left: 15%;
+      position: absolute;
+    }
+  
+    .section h2 {
+      font-size: 0.95rem;
+    }
+  
+    .attribution {
+      font-size: 0.8rem;
+      margin-top: 400px;
+    }
+  }
+  
